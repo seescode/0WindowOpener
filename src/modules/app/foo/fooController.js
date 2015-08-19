@@ -10,7 +10,7 @@ module.exports = /*@ngInject*/
 
     //
     if (assignmentWindow !== null) {
-      $window.onTestBeforeUnload = function () {
+      $window['onTestBeforeUnload'] = function () {
         //do some stuff
         console.log('inside');
       };

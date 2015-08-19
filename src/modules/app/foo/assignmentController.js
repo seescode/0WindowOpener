@@ -8,8 +8,8 @@ module.exports = /*@ngInject*/
     var openerWindow = $window.opener;
 
     $window.onunload = function (e) {
-      if (openerWindow !== null && openerWindow.onTestBeforeUnload) {
-        openerWindow.onTestBeforeUnload();
+      if (openerWindow !== null && openerWindow['onTestBeforeUnload']) {
+        openerWindow['onTestBeforeUnload']();
       }
     };
 
